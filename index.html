@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Die Stadt unter den Wurzeln - Eine interaktive Fantasy-Worldbuilding-Erfahrung">
+    <title>Die Stadt unter den Wurzeln - Interaktive Erkundung</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Audio Control -->
+    <button id="audioToggle" class="audio-control" aria-label="Audio Toggle">
+        <svg id="audioIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <path id="audioWaves" d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Die Stadt unter den Wurzeln</h1>
+            <p class="hero-subtitle">
+                Seit Jahrhunderten vom Sonnenlicht abgeschnitten. Eine Zivilisation im Geflecht der Wurzeln. 
+                Drei Ebenen. Drei Fraktionen. Ein Schicksal.
+            </p>
+            <div class="hero-buttons">
+                <a href="#ebenen" class="btn btn-primary">Ebenen erkunden</a>
+                <a href="#fraktionen" class="btn btn-secondary">Fraktionen entdecken</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projektübersicht -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="card">
+                <h2 class="card-title">Projektübersicht</h2>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <span class="project-label">Projekt</span>
+                        <span class="project-value">Worldbuilding "Wurzelheim" - Fantasy-Stadt-Lore</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-label">Einsatzzweck</span>
+                        <span class="project-value">Game-Design, Romanwelt, Tabletop-RPG</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-label">Rolle</span>
+                        <span class="project-value">Worldbuilder & Lore-Entwickler</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-label">Herausforderung</span>
+                        <span class="project-value">Komplexe unterirdische Fantasy-Stadt erschaffen</span>
+                    </div>
+                </div>
+                
+                <div class="project-features">
+                    <h3>Was dieses Projekt zeigt</h3>
+                    <ul>
+                        <li><strong>Komplexes Worldbuilding:</strong> Detaillierte Fantasy-Welt mit konsistenter Logik</li>
+                        <li><strong>Soziale Architektur:</strong> Drei Ebenen Gesellschaft mit unterschiedlichen Kulturen</li>
+                        <li><strong>Fraktionen-Design:</strong> Konfliktpotential durch unterschiedliche Ideologien</li>
+                        <li><strong>Atmosphärische Dichte:</strong> Immersive Beschreibung mit sensorischen Details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Die drei Ebenen -->
+    <section id="ebenen" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Die drei Ebenen</h2>
+                <p>Klicken Sie auf eine Ebene, um mehr zu erfahren</p>
+            </div>
+
+            <div class="levels-grid">
+                <!-- Karte -->
+                <div class="levels-map">
+                    <img src="images/ebenen-karte.png" alt="Karte der drei Ebenen" class="map-image">
+                    <div class="map-overlay">
+                        <button class="map-area map-area-1" data-level="krone" aria-label="Die Krone"></button>
+                        <button class="map-area map-area-2" data-level="herz" aria-label="Das Herz"></button>
+                        <button class="map-area map-area-3" data-level="tiefe" aria-label="Die Tiefe"></button>
+                    </div>
+                </div>
+
+                <!-- Level Details -->
+                <div class="levels-details">
+                    <div class="level-card" data-level-card="krone">
+                        <h3>Die Krone</h3>
+                        <p class="level-description">Die obere Ebene, wo Elite und Händler residieren. Näher zur Oberfläche, mit mehr Licht und Ressourcen.</p>
+                        <div class="level-expanded">
+                            <p>In der Krone leben die Privilegierten der unterirdischen Stadt. Hier sind die Kammern am hellsten, die Luft am frischesten. Die Bewohner genießen den Zugang zu den besten Ressourcen und haben die größte Hoffnung, eines Tages wieder das Sonnenlicht zu sehen.</p>
+                        </div>
+                    </div>
+
+                    <div class="level-card" data-level-card="herz">
+                        <h3>Das Herz</h3>
+                        <p class="level-description">Die mittlere Ebene, Heimat der Handwerker und Arbeiter. Das pulsierende Zentrum der Stadt.</p>
+                        <div class="level-expanded">
+                            <p>Das Herz ist das wahre Zentrum der Stadt. Hier schlägt der Puls des täglichen Lebens. Der mystische Herzraum mit seinen biolumineszenten Pilzen dient als spirituelles und soziales Zentrum, wo sich alle Ebenen treffen.</p>
+                        </div>
+                    </div>
+
+                    <div class="level-card" data-level-card="tiefe">
+                        <h3>Die Tiefe</h3>
+                        <p class="level-description">Die untere Ebene, wo die Ärmsten in Dunkelheit leben. Hier lauern Geheimnisse und verborgene Macht.</p>
+                        <div class="level-expanded">
+                            <p>In der Tiefe herrscht ewige Dunkelheit. Die Vergessenen leben hier, aber auch jene, die die ältesten Geheimnisse der Wurzeln kennen. Manche sagen, die wahre Macht der Stadt liegt nicht oben, sondern hier unten, tief im Geflecht der Wurzeln.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Herzraum Section -->
+    <section class="herzraum-section">
+        <div class="herzraum-bg"></div>
+        <div class="container herzraum-content">
+            <h2>Der Herzraum</h2>
+            <p>
+                Im Zentrum der Stadt liegt der mystische Herzraum. Ein Ort, wo biolumineszente Pilze in sanftem Blau und Grün leuchten. 
+                Hier treffen sich alle Ebenen, hier finden die wichtigsten Versammlungen statt. Der Herzraum ist mehr als nur ein Ort – 
+                er ist die Seele der Stadt.
+            </p>
+            <img src="images/herzraum.png" alt="Der mystische Herzraum" class="herzraum-image">
+        </div>
+    </section>
+
+    <!-- Die drei Fraktionen -->
+    <section id="fraktionen" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Die drei Fraktionen</h2>
+                <p>Unterschiedliche Visionen für die Zukunft der Stadt</p>
+            </div>
+
+            <!-- Fraktionen-Tabelle -->
+            <div class="card faction-table-card">
+                <table class="faction-table">
+                    <thead>
+                        <tr>
+                            <th>Fraktion</th>
+                            <th>Ideologie</th>
+                            <th>Ziel</th>
+                            <th>Führung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-faction="wurzelwaechter">
+                            <td class="faction-name">Wurzelwächter</td>
+                            <td>Bewahrung</td>
+                            <td>Status quo erhalten</td>
+                            <td>Die Hohe Wurzel</td>
+                        </tr>
+                        <tr data-faction="himmelsucher">
+                            <td class="faction-name">Himmelsucher</td>
+                            <td>Veränderung</td>
+                            <td>Zurück ans Licht</td>
+                            <td>Licht</td>
+                        </tr>
+                        <tr data-faction="wuerzelfluester">
+                            <td class="faction-name">Wurzelflüsterer</td>
+                            <td>Geheimnis</td>
+                            <td>Verborgene Macht nutzen</td>
+                            <td>Unbekannt</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Expandable Faction Details -->
+            <div class="factions-details">
+                <!-- Wurzelwächter -->
+                <div class="faction-card" data-faction-card="wurzelwaechter">
+                    <div class="faction-header">
+                        <div>
+                            <h3>Wurzelwächter</h3>
+                            <p class="faction-subtitle">Bewahrung • Status quo erhalten</p>
+                        </div>
+                        <button class="faction-toggle" aria-label="Details anzeigen">Mehr</button>
+                    </div>
+                    <div class="faction-content">
+                        <div class="faction-grid">
+                            <div class="faction-image-wrapper">
+                                <img src="images/hohe-wurzel-portrait.png" alt="Die Hohe Wurzel" class="faction-image">
+                                <p class="faction-leader">Die Hohe Wurzel</p>
+                            </div>
+                            <div class="faction-text">
+                                <div class="faction-section">
+                                    <h4>Beschreibung</h4>
+                                    <p>Die Wurzelwächter glauben, dass die Stadt unter den Wurzeln ihr Schicksal ist. Sie verehren die Wurzeln als heilig und sehen in ihnen Schutz und Weisheit. Für sie ist das Leben unter der Erde keine Strafe, sondern eine Berufung.</p>
+                                </div>
+                                <div class="faction-section">
+                                    <h4>Philosophie</h4>
+                                    <p>Die Hohe Wurzel lehrt, dass die Wurzeln die Stadt aus einem bestimmten Grund erschaffen haben. Die Bewohner sollen nicht gegen ihr Schicksal kämpfen, sondern es annehmen und in Harmonie mit dem unterirdischen Reich leben.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Himmelsucher -->
+                <div class="faction-card" data-faction-card="himmelsucher">
+                    <div class="faction-header">
+                        <div>
+                            <h3>Himmelsucher</h3>
+                            <p class="faction-subtitle">Veränderung • Zurück ans Licht</p>
+                        </div>
+                        <button class="faction-toggle" aria-label="Details anzeigen">Mehr</button>
+                    </div>
+                    <div class="faction-content">
+                        <div class="faction-grid">
+                            <div class="faction-image-wrapper">
+                                <img src="images/licht-portrait.png" alt="Licht" class="faction-image">
+                                <p class="faction-leader">Licht</p>
+                            </div>
+                            <div class="faction-text">
+                                <div class="faction-section">
+                                    <h4>Beschreibung</h4>
+                                    <p>Die Himmelsucher sehnen sich nach der Oberfläche. Sie glauben, dass die Menschen nicht für ein Leben in ewiger Dunkelheit geschaffen wurden. Ihr Ziel ist es, einen Weg nach oben zu finden und die Stadt wieder mit dem Sonnenlicht zu verbinden.</p>
+                                </div>
+                                <div class="faction-section">
+                                    <h4>Philosophie</h4>
+                                    <p>Licht, ihre charismatische Anführerin, trägt einen Namen, der Programm ist. Sie inspiriert ihre Anhänger mit Geschichten von blauem Himmel und warmem Sonnenlicht. Für sie ist die Hoffnung auf Rückkehr das einzige, was die Menschheit am Leben hält.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wurzelflüsterer -->
+                <div class="faction-card" data-faction-card="wuerzelfluester">
+                    <div class="faction-header">
+                        <div>
+                            <h3>Wurzelflüsterer</h3>
+                            <p class="faction-subtitle">Geheimnis • Verborgene Macht nutzen</p>
+                        </div>
+                        <button class="faction-toggle" aria-label="Details anzeigen">Mehr</button>
+                    </div>
+                    <div class="faction-content">
+                        <div class="faction-grid">
+                            <div class="faction-image-wrapper">
+                                <img src="images/herzraum.png" alt="Wurzelflüsterer" class="faction-image">
+                                <p class="faction-leader">Unbekannt</p>
+                            </div>
+                            <div class="faction-text">
+                                <div class="faction-section">
+                                    <h4>Beschreibung</h4>
+                                    <p>Die Wurzelflüsterer sind die mysteriöseste Fraktion. Sie behaupten, die Sprache der Wurzeln zu verstehen und mit ihnen kommunizieren zu können. Ihre wahren Ziele sind unklar, aber es heißt, sie suchen nach einer uralten Macht, die tief in den Wurzeln verborgen liegt.</p>
+                                </div>
+                                <div class="faction-section">
+                                    <h4>Philosophie</h4>
+                                    <p>Niemand weiß, wer die Wurzelflüsterer wirklich anführt. Sie treffen sich im Verborgenen, oft im Herzraum, wo die biolumineszenten Pilze ihre Rituale beleuchten. Manche fürchten sie, andere suchen ihren Rat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projekt-Details -->
+    <section class="section">
+        <div class="container">
+            <div class="card">
+                <h2 class="card-title">Projekt-Details</h2>
+                <table class="details-table">
+                    <tbody>
+                        <tr>
+                            <td class="detail-label">Kategorie</td>
+                            <td>CREATIVE WRITING - Worldbuilding & Lore</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Tonalität</td>
+                            <td>Atmosphärisch, mysteriös, detailreich, immersiv</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Umfang</td>
+                            <td>1200 Wörter (Mini-Lore)</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Zielgruppe</td>
+                            <td>Game-Designer, Autoren, Tabletop-Entwickler</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Deliverables</td>
+                            <td>Komplette Stadt-Lore mit Geschichte, Fraktionen, Geheimnissen</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Besonderheit</td>
+                            <td>Komplexe soziale Struktur mit Konfliktpotential</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="section cta-section">
+        <div class="container cta-content">
+            <h2>Brauchen Sie eine immersive Fantasy-Welt?</h2>
+            <p class="cta-text">
+                Ob für Games, Romane oder Tabletop-RPGs – ich erschaffe detailreiche Welten mit konsistenter Logik, 
+                faszinierenden Kulturen und spannenden Konflikten. Von Städten über gesamte Kontinente bis zu kompletten Universen.
+            </p>
+            
+            <div class="card cta-card">
+                <h3>Kontaktieren Sie mich für:</h3>
+                <ul class="cta-list">
+                    <li>Game-Worldbuilding & Lore-Entwicklung</li>
+                    <li>Fantasy-Roman-Welten mit Tiefe</li>
+                    <li>Tabletop-RPG-Settings und Hintergründe</li>
+                    <li>Komplette Welt-Konzepte mit Geschichte und Kultur</li>
+                </ul>
+            </div>
+
+            <a href="#kontakt" class="btn btn-primary btn-large">Worldbuilding anfragen →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Die Stadt unter den Wurzeln © 2025 • Ein Worldbuilding-Projekt</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
